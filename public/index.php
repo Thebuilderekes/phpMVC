@@ -1,13 +1,13 @@
 <?php
 
-function show($item){
+session_start();
+require "../app/core/init.php";
 
-	echo "<pre>";
-	print_r($item);
-	echo "</pre>";
-}
+$app = new App;
 
-$URL = $_GET['url'] ?? 'home';
-$URL = explode("/", $URL);
+$app->loadController();
+echo "index";
 
-show($URL);
+
+
+
