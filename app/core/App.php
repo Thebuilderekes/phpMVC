@@ -30,9 +30,8 @@ class App
     if (file_exists($filename)) {
 
 
-      header("Location: ../app/controllers/Home.php");
+      header("Location: $filename");
     } else {
-      $filename = "../app/controllers/_404.php";
       header("Location: ../app/controllers/_404.php");
 
     }
