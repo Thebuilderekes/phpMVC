@@ -24,8 +24,4 @@ I have XAMMP running on my linux machine which sets up local server along side m
 │   ├── public
 │   │   ├── index.php
 
-The ``_404.php`` file in the `app/controllers`folder starts with an underscore because that is a valid naming convention for a class.  
-The core folder contains files that will always be loaded.
-The `init.php` file has all the files in the core folder thatv are require through out the project.
-In the app/controller.php file we create a conroller class and logic to be used to decide what view is to be loaded 
 

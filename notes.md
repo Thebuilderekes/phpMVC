@@ -17,3 +17,30 @@ The view responds the logic of of the controller and in turn handles what is dis
 ## Process
 
 The router needs to be acknowledged by a controller that determines
+
+
+## Practices and conventions 
+- The core folder contains files that will always be loaded.
+- The `init.php` file has all the files in the core folder that are require through out the project.
+- The ``_404.php`` file in the `app/controllers`folder starts with an underscore because that is a valid naming convention for a class. 
+
+- In the app/controller.php file we create a conroller class and logic to be used to decide what view is to be loaded 
+- All asset paths for CSS, images and JS files will be loaded using the ``ROOT`` constant defined in the ``config.php`` file
+
+
+## View fetching process
+- Each view file is paired with a controller file of identical name, determining the displayed view based on the URL path entered into the browser's search bar. The URL correlates to the position of the filename in the controller. Since the filenames in the controller match those in the view folder, the logic is designed to retrieve the corresponding view file and present it in the browser.
+
+- Your asset folder containing CSS, images and javascript folders containing files should be alsways put in the public folder.
+
+### Note
+- It makes sense to put folder in views and have  multiple view folders and files but not so much for the controllers.
+you can run your conditional routing code to check for file views in subfolders of the views that have the same name as their parent folders and this would still work.
+- All assets will be loaded u
+
+
+// define('DBNAME', 'devblog');
+// define('DBHOST', 'localhost');
+// define('DBUSER', 'root');
+// define('DBPASS', '');
+// define('DBDRIVER', '');
