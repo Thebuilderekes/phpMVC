@@ -29,7 +29,36 @@ Trait Database {
      	return false;
  	}
   }
+
+
+  public function get_row($query , $data = [])
+  {
+
+     $con = $this->connect();
+     $stmt = $con->prepare($query);
+//This stmt above creates a prepared statement, which is a secure way to execute queries by separating the query itself from the data.
+     $check = $stmt->execute($data);
+
+     if($check)
+     {
+     	$result = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+     
+     if(is_array($result) && count($result))
+     {
+          return $result[0];
+     }
+     	return false;
+ 	}
+  }
 }
+
+
+// code above with error handling for testing
+//<?php
+
+
+
 
 
 // code above with error handling for testing

@@ -48,6 +48,9 @@ Otherwise, it returns false.
 If execution fails: (Not explicitly shown but assumed)
 Handle the error appropriately (e.g., log the error, throw an exception).
 
+
+- We want to be able to query the database and get one single row. So we create a `get_row` method for that. And since the database is a trait that can be reused, there will be times when other files would want to get a single row using the get_row method in database.
+
 ## View fetching process
 
 - Each view file is paired with a controller file of identical name, determining the displayed view based on the URL path entered into the browser's search bar. The URL correlates to the position of the filename in the controller. Since the filenames in the controller match those in the view folder, the logic is designed to retrieve the corresponding view file and present it in the browser.
